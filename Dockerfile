@@ -10,4 +10,4 @@ RUN make install
 
 FROM gcr.io/distroless/base-nossl-debian12:latest
 COPY --from=builder /usr/local/sbin/dnsmasq .
-CMD ["./dnsmasq", "-k"]
+CMD ["./dnsmasq", "-k", "--conf-file=/etc/dnsmasq.conf", ]
