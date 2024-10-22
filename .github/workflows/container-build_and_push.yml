@@ -1,8 +1,8 @@
 name: Docker image deploy
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - main
 permissions:
   packages: write
 jobs:
