@@ -1,0 +1,9 @@
+services:
+  dnsmasq:
+    image: ghcr.io/masebb/docker-dnsmasq
+    build: ./
+    network_mode: host
+    volumes:
+      - type: bind
+        source: dnsmasq.conf
+        target: /etc/dnsmasq.conf
