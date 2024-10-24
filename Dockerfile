@@ -10,4 +10,4 @@ RUN make install
 
 FROM debian:bookworm-slim
 COPY --from=builder /usr/local/sbin/dnsmasq .
-CMD ["./dnsmasq", "-k", "--conf-file=/etc/dnsmasq.conf", ]
+CMD ./dnsmasq -k --conf-file=/etc/dnsmasq.conf
