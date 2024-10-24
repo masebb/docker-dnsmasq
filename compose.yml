@@ -3,6 +3,8 @@ services:
     image: ghcr.io/masebb/docker-dnsmasq
     build: ./
     network_mode: host
+    cap_add:
+      - NET_ADMIN
     volumes:
       - type: bind
         source: dnsmasq.conf
